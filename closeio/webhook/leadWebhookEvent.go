@@ -4,7 +4,7 @@ type CloseLeadWebhookEvent struct {
 	Id             string                 `json:"id"`
 	DateCreated    string                 `json:"date_created"`
 	DateUpdated    string                 `json:"date_updated"`
-	OrganizationID string                 `json:"organization_id"`
+	OrganizationId string                 `json:"organization_id"`
 	UserId         string                 `json:"user_id"`
 	RequestId      string                 `json:"request_id"`
 	ObjectType     string                 `json:"object_type"`

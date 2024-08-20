@@ -12,7 +12,7 @@ type Condition struct {
 // Field represents the field object within a field_condition
 type Field struct {
 	FieldName   string `json:"field_name"`
-	CustomField customfield.Custom_Field
+	CustomField customfield.CustomField
 	ObjectType  string `json:"object_type"`
 	Type        string `json:"type"`
 }

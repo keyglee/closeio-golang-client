@@ -6,14 +6,14 @@ import (
 )
 
 type Lead struct {
-	ID            string                     `json:"-"`
-	Name          string                     `json:"name,omitempty"`
-	Url           string                     `json:"url,omitempty"`
-	Description   string                     `json:"description,omitempty"`
-	Status_id     string                     `json:"status_id,omitempty"`
-	Contacts      []contact.Contact          `json:"contacts,omitempty"`
-	Custom_fields []customfield.Custom_Field `json:"custom_fields,omitempty"`
-	Addresses     []Address                  `json:"addresses,omitempty"`
+	ID           string                    `json:"-"`
+	Name         string                    `json:"name,omitempty"`
+	Url          string                    `json:"url,omitempty"`
+	Description  string                    `json:"description,omitempty"`
+	StatusId     string                    `json:"status_id,omitempty"`
+	Contacts     []contact.Contact         `json:"contacts,omitempty"`
+	CustomFields []customfield.CustomField `json:"custom_fields,omitempty"`
+	Addresses    []Address                 `json:"addresses,omitempty"`
 }
 
 type Address struct {

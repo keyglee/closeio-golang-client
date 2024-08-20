@@ -4,18 +4,18 @@ import (
 	"strings"
 )
 
-type Custom_Field struct {
-	Id    string `json:"id"`
+type CustomField struct {
+	ID    string `json:"id"`
 	Name  string `json:"name"`
 	Value any    `json:"value"`
 }
 
-func (t Custom_Field) GetIDValue() (string, any) {
-	return "custom." + t.Id, t.Value
+func (t CustomField) GetIDValue() (string, any) {
+	return "custom." + t.ID, t.Value
 }
 
-func ExtractCustomFields(data map[string]interface{}) []Custom_Field {
-	var customFields []Custom_Field
+func ExtractCustomFields(data map[string]interface{}) []CustomField {
+	var customFields []CustomField
 
 	for key, value := range data {
 		// Skip non-custom fields
@@ -25,13 +25,13 @@ func ExtractCustomFields(data map[string]interface{}) []Custom_Field {
 		split_key := strings.Split(key, ".")
 		key_name := split_key[len(split_key)-1]
 
-		customFields = append(customFields, Custom_Field{Id: key_name, Value: value})
+		customFields = append(customFields, CustomField{ID: key_name, Value: value})
 	}
 
 	return customFields
 }
 
-func add_custom_fields_to_map(inInterface map[string]interface{}, custom_fields []Custom_Field) map[string]interface{} {
+func add_custom_fields_to_map(inInterface map[string]interface{}, custom_fields []CustomField) map[string]interface{} {
 
 	for _, value := range custom_fields {
 		key_id, key_value := value.GetIDValue()

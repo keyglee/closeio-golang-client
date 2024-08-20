@@ -1,6 +1,7 @@
 package contact
 
 type Contact struct {
+	ID     string  `json:"-"`
 	Name   string  `json:"name,omitempty"`
 	Title  string  `json:"title,omitempty"`
 	Emails []Email `json:"emails,omitempty"`
