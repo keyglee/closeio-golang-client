@@ -17,24 +17,6 @@ func CreateCloseClient(close_auth_key string) Client {
 	return Client{BaseURL: "https://api.close.com/api/v1", Api_key: close_auth_key}
 }
 
-func (t Client) Get(urlRoute string) ([]byte, error) {
-	req, err := http.NewRequest(http.MethodGet, t.BaseURL+urlRoute, nil)
-	if err != nil {
-		return nil, err
-	}
-	return t.makeHttpCall(req)
-}
-
-func (t Client) Update(urlRoute string, data io.Reader) ([]byte, error) {
-
-	req, err := http.NewRequest(http.MethodPut, t.BaseURL+urlRoute, data)
-	if err != nil {
-		return nil, err
-	}
-
-	return t.makeHttpCall(req)
-}
-
 func basicAuth(username, password string) string {
 	auth := username + ":" + password
 	return base64.StdEncoding.EncodeToString([]byte(auth))

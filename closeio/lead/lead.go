@@ -6,6 +6,7 @@ import (
 )
 
 type Lead struct {
+	ID            string                     `json:"-"`
 	Name          string                     `json:"name,omitempty"`
 	Url           string                     `json:"url,omitempty"`
 	Description   string                     `json:"description,omitempty"`
