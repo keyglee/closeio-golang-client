@@ -14,9 +14,9 @@ type TaskResponse struct {
 	ID             string `json:"id"`
 	IsComplete     string `json:"is_complete"`
 	IsDateless     string `json:"is_dateless"`
-	LeadID         string `json:"lead_id"`
+	LeadId         string `json:"lead_id"`
 	LeadName       string `json:"lead_name"`
-	ObjectID       string `json:"object_id"`
+	ObjectId       string `json:"object_id"`
 	ObjectType     string `json:"object_type"`
 	OrganizationId string `json:"organization_id"`
 	Text           string `json:"text"`

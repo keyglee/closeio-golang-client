@@ -5,7 +5,7 @@ import customfield "github.com/keyglee/closeio-golang-client/closeio/customField
 type ContactResponse struct {
 	Name           string                    `json:"name"`
 	Title          string                    `json:"title"`
-	Date_updated   string                    `json:"date_updated"`
+	DateUpdated    string                    `json:"date_updated"`
 	Phones         []PhoneResponse           `json:"phones"`
 	CustomFields   []customfield.CustomField `json:"custom_fields"`
 	CreatedBy      string                    `json:"created_by"`

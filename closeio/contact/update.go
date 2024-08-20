@@ -13,6 +13,6 @@ func (c Contact) Update(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPut, BaseURL+"/contact/"+c.ID, bytes.NewBuffer(updatedContactBuffer))
+	return http.NewRequest(http.MethodPut, BaseURL+"/contact/"+c.GetID(), bytes.NewBuffer(updatedContactBuffer))
 
 }

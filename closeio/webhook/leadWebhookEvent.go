@@ -1,4 +1,4 @@
-package closeio
+package webhook
 
 type CloseLeadWebhookEvent struct {
 	Id             string                 `json:"id"`

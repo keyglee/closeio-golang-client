@@ -13,6 +13,6 @@ func (l Lead) Update(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPut, BaseURL+"/lead/"+l.ID, bytes.NewBuffer(updatedLeadBuffer))
+	return http.NewRequest(http.MethodPut, BaseURL+"/lead/"+l.GetID(), bytes.NewBuffer(updatedLeadBuffer))
 
 }
