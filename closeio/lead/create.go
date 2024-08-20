@@ -7,12 +7,12 @@ import (
 )
 
 func (l Lead) Create(BaseURL string) (*http.Request, error) {
-	updatedLead, err := json.Marshal(l)
+	newLeadBuffer, err := json.Marshal(l)
 
 	if err != nil {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPost, BaseURL+"/lead/", bytes.NewBuffer(updatedLead))
+	return http.NewRequest(http.MethodPost, BaseURL+"/lead/", bytes.NewBuffer(newLeadBuffer))
 
 }
