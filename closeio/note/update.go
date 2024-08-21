@@ -13,6 +13,6 @@ func (n Note) Update(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPut, BaseURL+"/note/"+n.ID, bytes.NewBuffer(updatedNoteBuffer))
+	return http.NewRequest(http.MethodPut, BaseURL+BasePath+n.ID, bytes.NewBuffer(updatedNoteBuffer))
 
 }

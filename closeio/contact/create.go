@@ -13,6 +13,6 @@ func (c Contact) Create(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPost, BaseURL+"/contact/", bytes.NewBuffer(newContactBuffer))
+	return http.NewRequest(http.MethodPost, BaseURL+BasePath, bytes.NewBuffer(newContactBuffer))
 
 }

@@ -7,6 +7,6 @@ import (
 
 func (n Note) Read(BaseURL string) (*http.Request, error) {
 
-	return http.NewRequest(http.MethodGet, BaseURL+"/note/"+n.ID, bytes.NewBuffer(nil))
+	return http.NewRequest(http.MethodGet, BaseURL+BasePath+n.ID, bytes.NewBuffer(nil))
 
 }

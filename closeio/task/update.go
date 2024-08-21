@@ -13,6 +13,6 @@ func (t Task) Update(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPut, BaseURL+"/task/"+t.GetID(), bytes.NewBuffer(updatedTaskBuffer))
+	return http.NewRequest(http.MethodPut, BaseURL+BasePath+t.GetID(), bytes.NewBuffer(updatedTaskBuffer))
 
 }

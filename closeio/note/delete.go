@@ -7,6 +7,6 @@ import (
 
 func (n Note) Delete(BaseURL string) (*http.Request, error) {
 
-	return http.NewRequest(http.MethodDelete, BaseURL+"/note/"+n.ID, bytes.NewBuffer(nil))
+	return http.NewRequest(http.MethodDelete, BaseURL+BasePath+n.ID, bytes.NewBuffer(nil))
 
 }

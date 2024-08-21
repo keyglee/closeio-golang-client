@@ -13,6 +13,6 @@ func (n Note) Create(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPost, BaseURL+"/note/", bytes.NewBuffer(newNoteBuffer))
+	return http.NewRequest(http.MethodPost, BaseURL+BasePath, bytes.NewBuffer(newNoteBuffer))
 
 }

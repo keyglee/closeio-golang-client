@@ -7,6 +7,6 @@ import (
 
 func (t Task) Read(BaseURL string) (*http.Request, error) {
 
-	return http.NewRequest(http.MethodGet, BaseURL+"/task/"+t.GetID(), bytes.NewBuffer(nil))
+	return http.NewRequest(http.MethodGet, BaseURL+BasePath+t.GetID(), bytes.NewBuffer(nil))
 
 }

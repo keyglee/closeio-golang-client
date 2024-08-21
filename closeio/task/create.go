@@ -13,6 +13,6 @@ func (t Task) Create(BaseURL string) (*http.Request, error) {
 		return nil, err
 	}
 
-	return http.NewRequest(http.MethodPost, BaseURL+"/task/", bytes.NewBuffer(newTaskBuffer))
+	return http.NewRequest(http.MethodPost, BaseURL+BasePath, bytes.NewBuffer(newTaskBuffer))
 
 }
